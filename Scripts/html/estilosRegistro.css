@@ -1,0 +1,204 @@
+* {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+header {
+    margin-top:10px; /*Simplemente agregamos un margen*/
+    width: 100%;
+    height: 150px; /*Le damos un alto fijo al menu*/
+    overflow: hidden; /*Agregamos un overflow hidden para que no se muestren elementos que sobrepasen los 150px de alto*/
+    position: relative; /*Convertimos el menu en posición relativa porque mas adelante en el header > nav pondremos una posición absoluta*/
+}
+
+body {
+	background: url(fondoVerde.jpg) no-repeat center center fixed;
+	color: #fff;
+	background-size: 50px 50px;
+    background-size: 95% 95%;
+}
+
+nav {
+    top:-20px; /*Le damos una separación superior*/
+    position: absolute; /*Convertimos el contenedor en posición absoluta*/
+    left:0; /*Con left:0; y right:0; centramos el contenedor*/
+    right:0;
+ 
+    margin:20px auto;
+    max-width:1000px;
+    width:90%;
+}
+
+nav ul {
+	list-style:none;
+}
+ 
+nav > ul {
+	display:table;
+	/*Quitamos el overflow hidden que estaba aqui*/
+	width:100%;
+	background:#000;
+	position:relative;
+}
+ 
+nav > ul li {
+	display:table-cell;
+}
+ 
+/*Sub-menu*/
+nav > ul > li:hover > ul {
+	display:block;
+	height:100%;
+}
+ 
+nav > ul li a {
+	color:#fff;
+	display:block;
+	line-height:20px;
+	padding:20px;
+	position: relative;
+	text-align:center;
+	text-decoration:none;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+ 
+nav > ul > li > ul > li a:hover {
+	background:#5da5a2;
+}
+ 
+nav > ul > li > a span {
+	background:#174459;
+	display:block;
+	height:100%;
+	width:100%;
+	left:0;
+	position:absolute;
+	top:-55px;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+ 
+nav > ul > li > a span .icon {
+	display:block;
+	line-height:60px;
+}
+ 
+nav > ul > li > a:hover > span {
+	top:0;
+}
+ 
+/*Colores*/
+nav ul li a .primero {
+	background:#0e5061;
+}
+ 
+nav ul li a .segundo {
+	background:#5da5a2;
+}
+ 
+nav ul li a .tercero {
+	background:#f25724;
+}
+ 
+nav ul li a .cuarto {
+	background:#174459;
+}
+ 
+nav ul li a .quinto {
+	background:#37a4d9;
+}
+
+h1 {
+	margin: 20px 0px;
+	text-align: center;
+	font-weight: normal;
+	color: #fff;
+	font-size: 30px;
+}
+
+form {
+	background: #333333;
+	width: 600px;
+	border: .1px solid #4e4d4d;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	box-shadow: inset 0 0 10px #000;
+	margin: auto;
+}
+
+input {
+	width: 200px;
+	height: 35px;
+	padding: 0px 10px;
+	color: #6d6d6d;
+	text-align: center;
+	margin: 10px 30px; 
+}
+
+input:focus {
+    /* Para dar un pequeño destaque en elementos activos*/
+    border-color: #000;
+}
+
+b {
+	margin: 5px 250px;
+	font-size: 12px;
+	color:#fff;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+	cursor: pointer;
+}
+
+button {
+	width: 135px;
+	margin: 20px 30px 30px 80px;
+	height: 50px;
+	background: #3c3c3c; /* Old browsers */
+	background: -moz-linear-gradient(top,  #3c3c3c 0%, #494949 49%, #494a4c 50%, #2a2828 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #3c3c3c 0%,#494949 49%,#494a4c 50%,#2a2828 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #3c3c3c 0%,#494949 49%,#494a4c 50%,#2a2828 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c3c3c', endColorstr='#2a2828',GradientType=0 ); /* IE6-9 */
+	border: 1px solid #232323;
+	color: #fff;
+	box-shadow: 0px 2px 0px #000;
+	-moz-box-shadow: 0px 2px 0px #000;
+	-webkit-box-shadow: 0px 2px 0px #000;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	cursor: pointer;
+}
+
+button:link {
+	color: #fff;
+}
+
+button:hover {
+	text-decoration: underline;
+	font-size: 20px;
+}
+
+button:visited {
+	color: #fff;
+}
+
+a {
+	color: #fff;
+}
+
+footer {
+	margin-top: 50px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 100px;
+}

@@ -1,0 +1,35 @@
+#Eladmin tienda
+version: "3.9"
+
+
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: tiendaDB
+    tty: true
+    ports:
+     - "3306:3306"
+    volumes:
+     - /etc/tienda-ddbb/mysql/:/var/lib/mysql
+    environment: 
+      MYSQL_ROOT_PASSWORD: tiendaPass
+    networks: 
+     - prestashop-net
+     
+  prestashop:
+    image: prestashop/prestashop:1.7.8
+    container_name: prestashop
+    ports:
+      - "4280:80"
+    volumes:
+      - /var/www/html/tienda:/var/www/html
+    environment:
+      DB_SERVER: tiendaDB 
+    depends_on:  
+      - mysql
+    networks: 
+      - prestashop-net
+
+networks:
+  prestashop-net:
+    driver: bridge
